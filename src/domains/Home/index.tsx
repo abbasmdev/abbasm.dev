@@ -3,19 +3,12 @@ import Link from "next/link";
 import LinkedinIcon from "../../assets/linkedin.svg";
 import GitlabIcon from "../../assets/gitlab.svg";
 import React from "react";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <div className="relative">
-      <header className="px-6 fixed top-0 ">
-        <nav className="h-20 flex items-center justify-between">
-          <div className="text-abGreen hover:opacity-95 text-lg font-semibold">
-            <Link href={"/"} passHref>
-              Abbas Moharami
-            </Link>
-          </div>
-        </nav>
-      </header>
+      <Header />
       <main className=" px-6">
         <section className="flex flex-col gap-5 h-screen pb-20 justify-center items-start max-w-xl ">
           <h1 className="text-abGreen font-semibold">Hi, my name is</h1>
@@ -23,7 +16,7 @@ const Home = () => {
             Abbas Moharami.
           </h2>
           <h3 className="text-abSlate font-semibold text-4xl md:text-5xl">
-            I built things for the web with JavaScript
+            I Build things for the web with JavaScript
           </h3>
 
           <p className="text-abSlate">I’m a software engineer</p>
