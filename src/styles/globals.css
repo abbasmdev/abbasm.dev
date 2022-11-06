@@ -5,6 +5,8 @@
 body {
   @apply bg-abNavy;
   @apply text-abSlate-lightest;
+  @apply max-w-6xl mx-auto;
+  @apply scroll-smooth;
 }
 
 a {
