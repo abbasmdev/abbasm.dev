@@ -1,4 +1,5 @@
 import { Dialog } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 
 type DrawerProps = {
   title?: string;
@@ -20,24 +21,24 @@ export default function Drawer({
       unmount={false}
       open={isOpen}
       onClose={() => setIsOpen(false)}
-      className="fixed z-30 inset-0 overflow-y-auto"
+      className="fixed z-50 top-0  overflow-y-auto  right-0"
     >
-      <div className="flex w-3/4 h-screen">
-        <Dialog.Overlay className="z-40 fixed inset-0 bg-black bg-opacity-30" />
+      <div className="flex  h-screen  w-full ">
+        <Dialog.Overlay className="z-40 fixed inset-0 bg-black bg-opacity-30 " />
         <div
-          className={`z-50 flex flex-col justify-between bg-gray-500 w-full
-                         max-w-sm p-6 overflow-hidden text-left align-middle
-                         shadow-xl`}
+          className={`z-50 flex flex-col  bg-abSlate-dark w-full
+          max-w-sm px-9 py-7 overflow-hidden text-left items-end gap-3
+          shadow-xl`}
         >
+          <button onClick={() => setIsOpen(!isOpen)}>
+            <XMarkIcon width={24} />
+          </button>
           <div>
             <Dialog.Title className="font-bold text-2xl md:text-4xl text-blue-400">
               {title}
             </Dialog.Title>
             <Dialog.Description>{description}</Dialog.Description>
             {children}
-          </div>
-          <div className="self-center mt-10">
-            <Button onClick={() => setIsOpen(!isOpen)}>Close</Button>
           </div>
         </div>
       </div>
