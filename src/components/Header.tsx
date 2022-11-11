@@ -1,7 +1,8 @@
+"use client";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useState } from "react";
-import { Drawer } from "../../components";
+import { Drawer } from ".";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -21,13 +22,13 @@ const Header = () => {
           </button>
           <Drawer isOpen={drawerOpen} setIsOpen={(val) => setDrawerOpen(val)}>
             <div className="flex flex-col gap-3 w-40">
-              <a href="#about">About</a>
+              <Link href="#about">About</Link>
             </div>
           </Drawer>
         </div>
 
         <div className="hidden md:flex  gap-3 w-40 flex-1 items-center justify-end  ">
-          <a href="#about">About</a>
+          <Link href="#about">About</Link>
         </div>
       </nav>
     </header>
